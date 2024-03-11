@@ -10,7 +10,6 @@ project="2024-S1-UM-1"
 
 #        obsnums per source (make it negative if not added to the final combination)
 on = {}
-on['foo'] = [ ]
 on["NGC4388+vicinity"] = [ 112458, 112459, 112461, 112462, 112466,
                            112467, 112469, 112470,]
 
