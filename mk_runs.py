@@ -16,15 +16,13 @@ on["NGC4388+vicinity"] = [ 112458, 112459, 112461, 112462, 112466,
 
 #        common parameters per source on the first dryrun (run1a, run2a)
 pars1 = {}
-pars1["NGC4388+vicinity"] = "pix_list=-13,14,15"
+pars1["NGC4388+vicinity"] = ""
 
 #        common parameters per source on subsequent runs (run1b, run2b), e.g. bank=0 for WARES
 pars2 = {}
-pars2["NGC4388+vicinity"] = "bank=0 pix_list=-13"
+pars2["NGC4388+vicinity"] = "pix_list=-13"
 
-#        common parameters per source on subsequent runs (run1c, run2c), e.g. bank=1 for WARES
-pars3 = {}
-pars3["NGC4388+vicinity"] = "bank=1 pix_list=-13,14,15"
+# no pars3, only bank=0 was observed
 
 if __name__ == '__main__':    
-    runs.mk_runs(project, on, pars1, pars2, pars3, sys.argv)
+    runs.mk_runs(project, on, pars1, pars2, sys.argv)
