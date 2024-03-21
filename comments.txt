@@ -1,2 +1,39 @@
 #  <obsnum>   <comment>     # <SLpipeline args>
 #123456    QAFAIL     # ...
+
+112458   # pix_list=-13
+112459   # pix_list=-13
+112461   # pix_list=-13
+112462   # pix_list=-13
+112466   # pix_list=-13
+112467   # pix_list=-13
+112469   # pix_list=-13
+112470   # pix_list=-13
+112708   # pix_list=-13
+112709   # pix_list=-13
+112713   # pix_list=-13
+112714   # pix_list=-13
+112718   # pix_list=-13
+112719   # pix_list=-13
+112723   # pix_list=-13
+112724   # pix_list=-13
+
+
+112724  data not transferred yet  # pix_list=-13
+
+112826 beam13 alive again?
+# 112826, 112827, 112985, 112986, 112988, 112989, 
+
+112995  partial map
+ 
+#112996
+
+# from UM-8
+109948   # pix_list=-13
+109949   # pix_list=-13
+109953   # pix_list=-13
+109954   # pix_list=-13
+109960   # pix_list=-13
+109961   # pix_list=-13
+110036   # pix_list=-13
+110037   # pix_list=-13
