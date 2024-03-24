@@ -14,7 +14,7 @@ on["NGC4388+vicinity"] = [
 			   112458, 112459, 112461, 112462, 112466,
                            112467, 112469, 112470,
 			   112708, 112709, 112713, 112714, 112718, 112719, 112723, 
-                           # 112724, 
+                           112724, 
 	                   112826, 112827, 112985, 112986, 112988, 112989, 
                            112995, 112996,
                            113129, 113130, 113132, 113133,
@@ -31,9 +31,9 @@ pars1["NGC4388+vicinity"] = "dv=250 dw=300 b_order=1"
 
 #        common parameters per source on subsequent runs (run1b, run2b), e.g. bank=0 for WARES
 pars2 = {}
-pars2["NGC4388+vicinity"] = ""
+pars2["NGC4388+vicinity"] = "pix_list=-13"
 
 # no pars3, only bank=0 was observed
 
 if __name__ == '__main__':    
-    runs.mk_runs(project, on, pars1, pars2, sys.argv)
+    runs.mk_runs(project, on, pars1, pars2, None, sys.argv)
