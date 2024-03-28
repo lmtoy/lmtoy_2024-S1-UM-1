@@ -1,0 +1,45 @@
+#! /bin/bash
+#
+# checking pointing consistency via a simulation
+#
+# this simulates an inclined disk, with added noise
+# and cross corr the summed image (bar0.ccd) with each
+# of the n images.
+#
+
+
+n=40        # number images
+size=128    # size of a map
+noise=0.1   # noise (peak of signal = 1)
+h=5         # scale length of object
+e=0.7       # eccentriciy of object
+
+for arg in $*; do
+    export $arg
+done
+
+tab=ccd.txt
+rm -rf $tab
+
+#  summed image
+out=bar0.ccd
+rm -rf $out
+ccdgen - bar 1,$h,$e,90 $size | ccdgen $out noise "0,$noise/sqrt($n)" seed=-2 in=-
+echo $out >> $tab
+
+# single noisy images
+for i in $(seq $n); do
+   out=bar$i.ccd
+   rm -rf $out
+   ccdgen - bar 1,5,0.7,90 $size | ccdgen $out noise 0,$noise seed=-2 in=-
+   echo $out >> $tab
+done
+
+# doing all crosscorr
+ccdcross @$tab . center=$size/2,$size/2 box=10 > cross.tab
+# Dx,Dy
+tabplot cross.tab 3 4 -1 1 -1 1 point=2,0.2 ycoord=0 xcoord=0
+# stats of Dx,Dy
+tabstat  cross.tab 3,4
+
+echo "# n=$n size=$size h=$h e=0.7 noise=$noise"
