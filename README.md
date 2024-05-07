@@ -12,3 +12,5 @@ Mysteriously beam 13 came back to live on 12-mar
 
 b_order=1 seems appropriate, as there is a bit of a slope
 
+ccdcross  @mom0.tab . center=62,33 box=10  > mom0.txt
+tabplot mom0.txt 3 4 -2 2 -2 2 point=2,0.2
