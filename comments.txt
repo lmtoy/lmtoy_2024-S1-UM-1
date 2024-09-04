@@ -1,6 +1,10 @@
 #  <obsnum>   <comment>     # <SLpipeline args>
 #123456    QAFAIL     # ...
 
+112995 [QAFAIL] incomplete integration # qagrade = -2
+
+112458_110037 [39/40] Galaxy detected
+
 112458   # pix_list=-13
 112459   # pix_list=-13
 112461   # pix_list=-13
@@ -23,8 +27,6 @@
 
 112826 beam13 alive again?
 # 112826, 112827, 112985, 112986, 112988, 112989, 
-
-112995  partial map
  
 #112996
 
